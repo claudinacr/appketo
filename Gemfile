@@ -60,5 +60,5 @@ gem 'bootstrap-form'
 gem 'devise'
 
 group :production do
-  gem 'pg'
+  gem 'postgresql'
 end
