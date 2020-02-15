@@ -28,10 +28,14 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'postgresql'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+group :development do 
+    gem 'sqlite3'        
+end
+
+group :production do    
+    gem 'pg'
+    gem 'rails_12factor'
+    gem 'heroku-deflater'   
 end
 
 group :development do
@@ -58,7 +62,3 @@ gem 'bootstrap','~>4.4.1'
 gem 'jquery-rails'
 gem 'bootstrap-form'
 gem 'devise'
-
-group :production do
-  gem 'postgresql'
-end
